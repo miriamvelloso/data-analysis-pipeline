@@ -7,7 +7,7 @@ Para este proyecto utilizo:
 
 
 - [x] Choose a dataset you like from kaggle.com
-- [x] Create a python script and name it main.py. 
+- [ ] Create a python script and name it main.py. 
 - [x] Filter the dataset with the params received from main.py
 - [x] Enrich the dataset with external data.
 - [ ] Create some reports containing valuable data from the dataset
