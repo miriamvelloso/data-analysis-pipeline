@@ -1,11 +1,11 @@
-,song_name,Name,Streams,BirthDate,Country,Gender
-0,7 rings,Ariana Grande,789094044,1993-06-26,United States,Female
-1,Con Calma,Daddy Yankee,715027898,1977-02-03,Puerto Rico,Male
-2,Dance Monkey,Tones and I,764208309,,Australia,Female
-3,Happier,Marshmello,620829467,1992-05-19,United States,Male
-4,SeÃÂ±orita,Shawn Mendes,763064359,1998-08-08,Canada,Male
-5,Shallow,Lady Gaga,714097238,1986-03-28,United States,Female
-6,Someone You Loved,Lewis Capaldi,661930419,1996-10-17,United Kingdom,Male
-7,Sweet but Psycho,Ava Max,1166185736,1994-02-16,United States,Female
-8,Wow.,Post Malone,615519053,1995-07-04,United States,Male
-9,bad guy,Billie Eilish,1052358787,2001-12-18,United States,Female
+,Name,num_songs,Streams,BirthDate,Country,Gender
+0,Billie Eilish,27,4497652401,2001-12-18,United States,Female
+1,Post Malone,45,4244240516,1995-07-04,United States,Male
+2,Ariana Grande,28,3339800155,1993-06-26,United States,Female
+3,Ed Sheeran,25,3118912731,1991-02-17,United Kingdom,Male
+4,Lil Nas X,20,1777338768,1999-04-09,Atlanta,Male
+5,Shawn Mendes,8,1729841617,1998-08-08,Canada,Male
+6,Ava Max,2,1573833722,1994-02-16,United States,Female
+7,Khalid,24,1435399324,1998-02-11,United States,Male
+8,XXXTENTACION,18,1370067912,1998-01-23,United States,Male
+9,Queen,11,1358564243,1970-06-27,United Kingdom,
