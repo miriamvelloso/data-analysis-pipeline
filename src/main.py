@@ -1,6 +1,9 @@
 from argparse import ArgumentParser
 import pandas as pd
-import analysis 
+from analysis import *
+from charts import *
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 
 def parse():
@@ -24,6 +27,26 @@ def main():
 if __name__ == '__main__':
     main()
 
+
+
+def main():
+    args=parse()
+    year=args.year
+    tour=args.tour
+    print(year)
+    print(tour)
+    data=acquire()
+    filtered = filters(data,year,tour)
+    results = analysis(filtered)
+    barchart = visualize(results,tour,year)
+    save_chart(barchart)
+    filtered2 = filters2(data)
+    results2 = analysis2(filtered2)
+    winners_data = acquire2()
+    send_email(results2,winners_data)
+    
+if __name__ == '__main__':
+    main()
 
 
 
