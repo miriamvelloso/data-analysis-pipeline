@@ -1,7 +1,7 @@
 import pandas as pd
 
 def acquire():
-    data=pd.read_csv('Input/spotify_clean.csv')
+    data=pd.read_csv('src/spotify_clean.csv')
     return data
 
 def filters(data,followers,streams):
