@@ -6,6 +6,9 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import src.analysis as an
 import src.charts as ch
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 
 def send_email(text,text1):
@@ -15,9 +18,9 @@ def send_email(text,text1):
     Adjunto vas a encontrar una gráfica con los 10 artistas con mayor numero de reproducciones en el 2019,estos son los datos  de cada artista: Nombre, Fecha de Nacimiento, Sexo, Ganancias: {text}
     estos son los datos personales de cada artista: Nacionalidad, Fecha de Nacimiento, Sexo, Streams: {text1}
     """
-    sender_email = input("Enter sender_email:")
+    sender_email = 'pruebaironhackmiriam@gmail.com'
     receiver_email = input("Enter destinatary_email:")
-    password = input("Enter password:")
+    password = os.getenv("pass")
 
     message = MIMEMultipart()
     message["From"] = sender_email
@@ -38,5 +41,6 @@ def send_email(text,text1):
 
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-        server.login(sender_email, password)
-        server.sendmail(sender_email, receiver_email, text)
+        server.login("sender_email", "password")
+        server.sendmail("pruebaironhackmiriam@gmail.com", "receiver_email", "text")
+        server.quit()

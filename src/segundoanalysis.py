@@ -3,13 +3,13 @@ import src.analysis as an
 
 def filters2(df):
     filtered2=df[(df["Top10"]==1)]
-    print(filtered2)
     return filtered2
 
 def analysis2(df):
     grouped2=df.groupby("Artist").agg({"Track Name":"count","Streams":"sum"})
     results2=grouped2.sort_values("Streams",ascending=False)
     print("Estos son los 10 artistas más escuchados en 2019")
+    print(results2)
     return results2
 
 
