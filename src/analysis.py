@@ -1,11 +1,11 @@
 import pandas as pd
 
 def acquire():
-    data=pd.read_csv('spotify_clean.csv')
+    data=pd.read_csv('Input/spotify_clean.csv')
     return data
 
-def filters(df,Artist_follower,Streams1):
-    filtered=df[(df["Artist_follower"]==followers)&(df["Streams1"]==streams)]
+def filters(data,followers,streams):
+    filtered=data[(data["Artist_follower"]==f"{followers}")&(data["Streams1"]==f"{streams}")]
     print(filtered)
     return filtered
 

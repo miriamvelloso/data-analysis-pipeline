@@ -23,7 +23,7 @@ def send_email(text):
     message["To"] = receiver_email
     message["Subject"] = subject
     message.attach(MIMEText(body, "plain"))
-    filename = "Top 10 artists.png"
+    filename = "Top 10 most popularity Artists.png"
     with open(filename, "rb") as attachment:
         part = MIMEBase("application", "octet-stream")
         part.set_payload(attachment.read())
