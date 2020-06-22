@@ -24,7 +24,7 @@ def send_email(text):
     message["Subject"] = subject
     message.attach(MIMEText(body, "plain"))
     filename = "Top 10 most popularity Artists.png"
-    with open(filename, "rb") as attachment:
+    with open(Output/filename, "rb") as attachment:
         part = MIMEBase("application", "octet-stream")
         part.set_payload(attachment.read())
     encoders.encode_base64(part)

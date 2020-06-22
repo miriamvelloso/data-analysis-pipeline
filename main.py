@@ -1,7 +1,9 @@
 from argparse import ArgumentParser
 import pandas as pd
-from analysis import *
-from charts import *
+import src.analysis as an
+import src.charts as ch
+import src.segundoanalysis as san
+import src.mail as mail
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -24,6 +26,10 @@ def main():
     results = analysis(filtered)
     chart = visualize(results,followers,streams)
     save_chart(chart)
+    filtered2 = filters2(data)
+    results2 = analysis2(filtered2)
+    artist_data = acquire2()
+    send_email(results2,artist_data)
 
 
 if __name__ == '__main__':
