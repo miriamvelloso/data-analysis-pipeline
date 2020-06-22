@@ -1,15 +1,17 @@
-import pandas as pd
+import matplotlib.pyplot as plt; plt.rcdefaults()
+import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
 import seaborn as sns
-from analysis import *
 
+df_import = pd.read_csv('src/artists_clean.csv',encoding='latin-1')
 
-def visualize(df,Artist,Artist_popularity):
+def visualize(dd,Gender,Country):
     title = 'Top 10 most popularity Artists '
     fig, ax = plt.subplots(figsize=(15,8))
-    barchart = sns.barplot(data=df, x='Artist', y='Artist_popularity')
+    chart = sns.barplot(data=df_import, x='Name', y='Streams')
     plt.title(title + "\n", fontsize=10)
-    return barchart
+    return chart
 
 def save_chart(graph):
     title2 = 'Top 10 most popularity Artists'
