@@ -1,4 +1,4 @@
-##Project 2 - Data Analysis Pipeline
+## Project 2 - Data Analysis Pipeline
 
 - Para este proyecto utilizo:
 
