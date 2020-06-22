@@ -1,4 +1,4 @@
-## ¿Quienes es el top 10 de artistas internacionales con mayor número de streamings?
+## ¿Quienes son los 10 de artistas internacionales con mayor número de streamings?
 
 - Para este proyecto utilizo:
 
