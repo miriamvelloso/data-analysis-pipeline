@@ -6,6 +6,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import src.analysis as an
 import src.charts as ch
+import getpass 
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -20,7 +21,7 @@ def send_email(text,text1):
     """
     sender_email = 'pruebaironhackmiriam@gmail.com'
     receiver_email = input("Enter destinatary_email:")
-    password = os.getenv("pass")
+    password = p = getpass.getpass(prompt='Your password')
 
     message = MIMEMultipart()
     message["From"] = sender_email
@@ -40,7 +41,8 @@ def send_email(text,text1):
     text = message.as_string()
 
     context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+    with  smtplib.SMTP('smtp.gmail.com', 587) as server:
+        server.starttls() 
         server.login("sender_email", "password")
         server.sendmail("pruebaironhackmiriam@gmail.com", "receiver_email", "text")
         server.quit()
